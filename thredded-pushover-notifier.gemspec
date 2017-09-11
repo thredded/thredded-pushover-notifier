@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['tim@red56.uk']
 
   spec.summary       = 'A notifier for Thredded to push new post notifications to the Pushover app'
-  spec.homepage      = 'https://github.com/red56/thredded-pushover-notifier'
+  spec.homepage      = 'https://github.com/thredded/thredded-pushover-notifier'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
