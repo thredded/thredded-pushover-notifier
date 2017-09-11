@@ -1,4 +1,5 @@
-# Thredded::Pushover::Notifier
+# Thredded Pushover Notifier [![Build Status](https://travis-ci.org/thredded/thredded-pushover-notifier.svg?branch=master)](https://travis-ci.org/thredded/thredded-pushover-notifier)
+
 
 A notifier for [Thredded](https://github.com/thredded/thredded/) allowing push notifications to be sent via [Pushover](https://pushover.net/)
 
