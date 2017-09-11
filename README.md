@@ -22,11 +22,8 @@ Or install it yourself as:
 
 * You will need a Pushover app token (see the first option on https://pushover.net/api)
 * Let's assume you've added your Pushover app token as an environment variable `PUSHOVER_APP_TOKEN`.
-* You will need to have Thredded working already (at least v0.13.4) and have an iniializer already created.
+* You will need to have Thredded working already (at least v0.13.4) and have an initializer already in your rails app.
 * Let's assume your app is being served at http://example.com
-
-
-Let's assume
 
 To setup two notifiers - email and pushover, add the following to the bottom of your thredded.rb initializer:
 
