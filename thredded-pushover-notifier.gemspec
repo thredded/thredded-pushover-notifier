@@ -21,10 +21,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'thredded', '~> 0.13', '>= 0.13.4'
-  spec.add_runtime_dependency 'sqlite3'
   spec.add_runtime_dependency 'actionview'
 
   spec.add_development_dependency 'bundler', '~> 1.12'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'sqlite3'
 end
