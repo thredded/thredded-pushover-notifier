@@ -53,7 +53,7 @@ describe Thredded::PushoverNotifier::ContentHelper do
             Hmmm [IMAGE] some text
             [IMAGE]
           CONTENT
-      )
+        )
       end
     end
   end
