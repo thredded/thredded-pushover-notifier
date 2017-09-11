@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "net/https"
+require 'net/https'
 
 module Thredded
   class PushoverNotifier
-    VERSION = "0.1.0"
+    VERSION = '0.1.0'
 
     def initialize(pushover_app_token, root_url)
       @pushover_app_token = pushover_app_token
@@ -12,11 +12,11 @@ module Thredded
     end
 
     def key
-      "pushover"
+      'pushover'
     end
 
     def human_name
-      I18n.t("pushover_notifier.by_pushover")
+      I18n.t('pushover_notifier.by_pushover')
     end
 
     def new_post(post, users)
@@ -28,11 +28,10 @@ module Thredded
       end
     end
 
-    def new_private_post
-    end
+    def new_private_post; end
 
     def send_message(user_key, message, title, url)
-      pushover_url = URI.parse("https://api.pushover.net/1/messages.json")
+      pushover_url = URI.parse('https://api.pushover.net/1/messages.json')
       req = Net::HTTP::Post.new(pushover_url.path)
       data = {
         token: @pushover_app_token,
@@ -40,7 +39,7 @@ module Thredded
         message: message,
         title: title,
         url: url,
-        url_title: "View topic"
+        url_title: 'View topic'
       }
       req.set_form_data(data)
       res = Net::HTTP.new(pushover_url.host, pushover_url.port)
@@ -49,5 +48,4 @@ module Thredded
       res.start { |http| http.request(req) }
     end
   end
-
 end

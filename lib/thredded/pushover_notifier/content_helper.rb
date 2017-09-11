@@ -1,18 +1,12 @@
 # frozen_string_literal: true
 
 require 'rails'
-require 'thredded/engine'
 require 'action_view'
 
-# NB not loaded until needed so that it can set up the config
 module Thredded
   class PushoverNotifier
     class ContentHelper
       include ActionView::Helpers::TextHelper
-
-      Thredded::Engine.config.to_prepare do
-        Thredded::PushoverNotifier::ContentHelper.include Thredded::Engine.routes.url_helpers
-      end
 
       attr_reader :post, :root_url
 
@@ -30,19 +24,18 @@ module Thredded
       end
 
       def post_url
-        "#{root_url}#{post_permalink_path(post)}"
+        "#{root_url}#{post_permalink_path(post.id)}"
       end
 
       protected
 
       def replace_images
-        post.content.gsub(/!\[[^\]]*?\]\(([^)]*?)\)/, "[IMAGE]")
+        post.content.gsub(/!\[[^\]]*?\]\(([^)]*?)\)/, '[IMAGE]')
       end
 
       def content_truncated(content)
-        truncate(content, length: 100, separator: " ")
+        truncate(content, length: 100, separator: ' ')
       end
-
     end
   end
 end

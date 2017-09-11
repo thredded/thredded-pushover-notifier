@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - './spec/dummy/**/*'
+  DisplayCopNames: true
+Metrics/BlockLength:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+
