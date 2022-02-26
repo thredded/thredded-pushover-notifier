@@ -4,7 +4,7 @@ require 'net/https'
 
 module Thredded
   class PushoverNotifier
-    VERSION = '0.1.0'
+    VERSION = '1.0.0'
 
     def initialize(pushover_app_token, root_url)
       @pushover_app_token = pushover_app_token
